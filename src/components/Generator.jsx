@@ -1,5 +1,7 @@
+import SectionWrapper from "./SectionWrapper";
+
 const Generator = () => {
-  return <div></div>;
+  return <SectionWrapper></SectionWrapper>;
 };
 
 export default Generator;
