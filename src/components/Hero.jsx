@@ -6,9 +6,10 @@ const Hero = () => {
         Swole <span>normous</span>
       </h1>
       <p>
-        I hereby acknowledgement that I may become unbelievably swolenormous and
-        accept all risks of becoming the local mass monstrosity, afflicted with
-        severe body dismorphia, unable to fit through doors.
+        I hereby acknowledgement that I may become{" "}
+        <span>unbelievably swolenormous </span>and accept all risks of becoming
+        the local <span> mass monstrosity</span>, afflicted with severe body
+        dismorphia, unable to fit through doors.
       </p>
     </div>
   );
