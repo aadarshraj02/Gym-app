@@ -18,7 +18,13 @@ const Generator = () => {
     <SectionWrapper
       header={"generate your workout"}
       title={["It's", "Huge", "o'clock"]}
-    ></SectionWrapper>
+    >
+      <Header
+        index={"01"}
+        title={"Pick your poison"}
+        description={"Select the workout you wish to endure."}
+      />
+    </SectionWrapper>
   );
 };
 
