@@ -15,10 +15,12 @@ const App = () => {
       return;
     }
     let newWorkout = generateWorkout({ poison, muscle, goals });
+    console.log(newWorkout);
     setWorkout(newWorkout);
 
-    window.location.href = "#workout";
+    // window.location.href = "#workout";
   }
+
   return (
     <main className="min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-slate-950 text-white text-sm sm:text-base">
       <Hero />
@@ -27,8 +29,8 @@ const App = () => {
         setPoison={setPoison}
         muscle={muscle}
         setMuscle={setMuscle}
-        goal={goals}
-        setGoal={setGoals}
+        goals={goals}
+        setGoals={setGoals}
         updateWorkout={updateWorkout}
       />
       {workout && <Workout workout={workout} />}
