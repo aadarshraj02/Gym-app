@@ -44,9 +44,9 @@ const Generator = () => {
         description={"Select the muscles judge for annihilation."}
       />
       <div className="bg-slate-850 p-3 border border-solid border-blue-400 rounded-lg">
-        <div>
+        <div className="relative flex items-center justify-center">
           <p>Select muscle groups</p>
-          <FaCaretDown />
+          <FaCaretDown className="absolute right-3 top-1/2 -translate-y-1/2" />
         </div>
       </div>
     </SectionWrapper>
