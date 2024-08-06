@@ -4,7 +4,7 @@ import { FaCaretDown } from "react-icons/fa";
 
 function Header(props) {
   const { index, title, description } = props;
-  let showModals = false;
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-center gap-2">
@@ -19,6 +19,11 @@ function Header(props) {
 }
 
 const Generator = () => {
+  let showModals = false;
+
+  const toggleModal = () => {
+    showModals = !showModals;
+  };
   return (
     <SectionWrapper
       header={"generate your workout"}
@@ -44,16 +49,15 @@ const Generator = () => {
         title={"Lock on Targets"}
         description={"Select the muscles judge for annihilation."}
       />
-      <div className="bg-slate-850 p-3 border border-solid border-blue-400 rounded-lg">
-        <div className="relative flex items-center justify-center">
+      <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg flex items-center justify-center">
+        <button
+          onClick={toggleModal}
+          className="relative flex items-center justify-center p-3"
+        >
           <p>Select muscle groups</p>
           <FaCaretDown className="absolute right-3 top-1/2 -translate-y-1/2" />
-        </div>
-        {
-            showModals && (
-              <div></div>
-            )
-        }
+        </button>
+        {showModals && <div></div>}
       </div>
     </SectionWrapper>
   );
