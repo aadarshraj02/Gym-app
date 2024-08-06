@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { WORKOUTS } from "../utils/swoldier";
+import { SCHEMES, WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
 import { FaCaretDown } from "react-icons/fa";
 
@@ -60,7 +60,22 @@ const Generator = () => {
           <p>Select muscle groups</p>
           <FaCaretDown className="absolute right-3 top-1/2 -translate-y-1/2" />
         </button>
-        {showModals && <div></div>}
+        {showModal && <div></div>}
+      </div>
+      <Header
+        index={"03"}
+        title={"Become Juggernaut"}
+        description={"Select your ultimate objective."}
+      />
+      <div className="grid grid-cols-3 gap-4">
+        {Object.keys(SCHEMES).map((scheme, schemeIndex) => (
+          <button
+            key={schemeIndex}
+            className="bg-slate-950 border border-blue-400 py-2 rounded-lg hover:border-blue-600 duration-200"
+          >
+            <p className="capitalize">{scheme.replaceAll("_", " ")}</p>
+          </button>
+        ))}
       </div>
     </SectionWrapper>
   );
