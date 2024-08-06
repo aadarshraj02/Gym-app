@@ -14,11 +14,10 @@ const App = () => {
       <Generator
         poison={poison}
         setPoison={setPoison}
-        muscles={muscle}
-        setMuscles={setMuscle}
+        muscle={muscle}
+        setMuscle={setMuscle}
         goal={goals}
         setGoal={setGoals}
-        updateWorkout={updateWorkout}
       />
       {workout && <Workout workout={workout} />}
     </main>
