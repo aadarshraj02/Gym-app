@@ -27,11 +27,13 @@ const Generator = () => {
         title={"Pick your poison"}
         description={"Select the workout you wish to endure."}
       />
-      {Object.keys(WORKOUTS).map((type, index) => (
-        <button key={index}>
-          <p>{type}</p>
-        </button>
-      ))}
+      <div className="grid grid-cols-2 sm:grid-cols-4">
+        {Object.keys(WORKOUTS).map((type, index) => (
+          <button key={index}>
+            <p>{type}</p>
+          </button>
+        ))}
+      </div>
     </SectionWrapper>
   );
 };
