@@ -27,6 +27,29 @@ const Generator = () => {
   const toggleModal = () => {
     setShowModal(!showModal);
   };
+
+  const updateMuscles = (muscleGroup) => {
+    if (muscle.includes(muscleGroup)) {
+      setMuscle(muscle.filter((val) => val !== muscleGroup));
+      return;
+    }
+
+    if (muscle.length > 2) {
+      return;
+    }
+
+    if (poison !== "individual") {
+      setMuscle([muscleGroup]);
+      setShowModal(false);
+      return;
+    }
+
+    setMuscle([...muscle, muscleGroup]);
+    if (muscle.length === 2) {
+      setShowModal(false);
+    }
+  };
+
   return (
     <SectionWrapper
       header={"generate your workout"}
@@ -56,7 +79,7 @@ const Generator = () => {
       <Header
         index={"02"}
         title={"Lock on Targets"}
-        description={"Select the muscles judge for annihilation."}
+        description={"Select the muscle judge for annihilation."}
       />
       <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg flex flex-col">
         <button
