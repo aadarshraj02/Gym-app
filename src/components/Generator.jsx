@@ -43,7 +43,7 @@ const Generator = () => {
         title={"Lock on Targets"}
         description={"Select the muscles judge for annihilation."}
       />
-      <div className="">
+      <div className="bg-slate-850 p-3 border border-solid border-blue-400 rounded-lg">
         <div>
           <p>Select muscle groups</p>
           <FaCaretDown />
