@@ -21,7 +21,15 @@ function Header(props) {
 }
 
 const Generator = (props) => {
-  const { muscle, setMuscle, poison, setPoison, goals, setGoals } = props;
+  const {
+    muscle,
+    setMuscle,
+    poison,
+    setPoison,
+    goals,
+    setGoals,
+    updateWorkout,
+  } = props;
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
@@ -139,7 +147,7 @@ const Generator = (props) => {
           </button>
         ))}
       </div>
-      <Button text={"Formulate"}></Button>
+      <Button func={updateWorkout} text={"Formulate"}></Button>
     </SectionWrapper>
   );
 };
