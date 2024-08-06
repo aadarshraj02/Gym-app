@@ -37,6 +37,16 @@ const Generator = () => {
           </button>
         ))}
       </div>
+      <Header
+        index={"02"}
+        title={"Lock on Targets"}
+        description={"Select the muscles judge for annihilation."}
+      />
+      <div className="">
+       <div>
+        <p>Select muscle groups</p>
+       </div>
+      </div>
     </SectionWrapper>
   );
 };
