@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
 import { FaCaretDown } from "react-icons/fa";
@@ -19,10 +20,9 @@ function Header(props) {
 }
 
 const Generator = () => {
-  let showModals = false;
-
+  const [showModal, setShowModal] = useState(false);
   const toggleModal = () => {
-    showModals = !showModals;
+    setShowModal(!showModal);
   };
   return (
     <SectionWrapper
