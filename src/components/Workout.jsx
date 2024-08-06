@@ -1,4 +1,5 @@
-const Workout = () => {
+const Workout = (props) => {
+  const { workout } = props;
   return <div></div>;
 };
 
