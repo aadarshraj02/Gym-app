@@ -3,12 +3,14 @@ import SectionWrapper from "./SectionWrapper";
 function Header(props) {
   const { index, title, description } = props;
   return (
-    <div>
-      <div>
-        <p>{index}</p>
-        <h4>{title}</h4>
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center justify-center gap-2">
+        <p className="text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-400">
+          {index}
+        </p>
+        <h4 className="text-lg sm:text-2xl md:text-3xl">{title}</h4>
       </div>
-      <p>{description}</p>
+      <p className="text-sm sm:text-base mx-auto">{description}</p>
     </div>
   );
 }
