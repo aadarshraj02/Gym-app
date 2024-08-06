@@ -4,6 +4,7 @@ import { FaCaretDown } from "react-icons/fa";
 
 function Header(props) {
   const { index, title, description } = props;
+  let showModals = false;
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-center gap-2">
@@ -48,6 +49,11 @@ const Generator = () => {
           <p>Select muscle groups</p>
           <FaCaretDown className="absolute right-3 top-1/2 -translate-y-1/2" />
         </div>
+        {
+            showModals && (
+              <div></div>
+            )
+        }
       </div>
     </SectionWrapper>
   );
