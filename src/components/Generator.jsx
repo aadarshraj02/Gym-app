@@ -1,5 +1,6 @@
 import { WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
+import { FaCaretDown } from "react-icons/fa";
 
 function Header(props) {
   const { index, title, description } = props;
@@ -43,9 +44,10 @@ const Generator = () => {
         description={"Select the muscles judge for annihilation."}
       />
       <div className="">
-       <div>
-        <p>Select muscle groups</p>
-       </div>
+        <div>
+          <p>Select muscle groups</p>
+          <FaCaretDown />
+        </div>
       </div>
     </SectionWrapper>
   );
