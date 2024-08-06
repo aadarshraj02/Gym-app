@@ -64,6 +64,7 @@ const Generator = () => {
         {Object.keys(WORKOUTS).map((type, index) => (
           <button
             onClick={() => {
+              setMuscle([])
               setPoison(type);
             }}
             key={index}
@@ -86,7 +87,9 @@ const Generator = () => {
           onClick={toggleModal}
           className="relative flex items-center justify-center p-3"
         >
-          <p>Select muscle groups</p>
+          <p className="capitalize">
+            {muscle.length === 0 ? "Select muscle groups" : muscle.join(" ")}
+          </p>
           <FaCaretDown className="absolute right-3 top-1/2 -translate-y-1/2" />
         </button>
         {showModal && (
