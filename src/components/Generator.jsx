@@ -31,9 +31,9 @@ const Generator = () => {
         {Object.keys(WORKOUTS).map((type, index) => (
           <button
             key={index}
-            className="bg-slate-950 border border-blue-400 py-2 rounded-lg"
+            className="bg-slate-950 border border-blue-400 py-2 rounded-lg hover:border-blue-600 duration-200"
           >
-            <p>{type}</p>
+            <p className="capitalize">{type.replaceAll("_", " ")}</p>
           </button>
         ))}
       </div>
