@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SCHEMES, WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
 import { FaCaretDown } from "react-icons/fa";
+import Button from "./Button";
 
 function Header(props) {
   const { index, title, description } = props;
@@ -64,7 +65,7 @@ const Generator = () => {
         {Object.keys(WORKOUTS).map((type, index) => (
           <button
             onClick={() => {
-              setMuscle([])
+              setMuscle([]);
               setPoison(type);
             }}
             key={index}
@@ -139,6 +140,7 @@ const Generator = () => {
           </button>
         ))}
       </div>
+      <Button text={"Formulate"}></Button>
     </SectionWrapper>
   );
 };
