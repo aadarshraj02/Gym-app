@@ -1,3 +1,4 @@
+import { WORKOUTS } from "../utils/swoldier";
 import SectionWrapper from "./SectionWrapper";
 
 function Header(props) {
@@ -26,6 +27,11 @@ const Generator = () => {
         title={"Pick your poison"}
         description={"Select the workout you wish to endure."}
       />
+      {Object.keys(WORKOUTS).map((type, index) => (
+        <button key={index}>
+          <p>{type}</p>
+        </button>
+      ))}
     </SectionWrapper>
   );
 };
