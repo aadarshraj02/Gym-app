@@ -66,7 +66,28 @@ const Generator = () => {
           <p>Select muscle groups</p>
           <FaCaretDown className="absolute right-3 top-1/2 -translate-y-1/2" />
         </button>
-        {showModal && <div>modal</div>}
+        {showModal && (
+          <div className="flex flex-col px-3 pb-3">
+            {(poison === "individual"
+              ? WORKOUTS[poison]
+              : Object.keys(WORKOUTS[poison])
+            ).map((muscleGroup, muscleGroupIndex) => {
+              return (
+                <button
+                  key={muscleGroupIndex}
+                  className={
+                    "hover:text-blue-400 duration-200 " +
+                    (muscle.includes(muscleGroup) ? " text-blue-400" : " ")
+                  }
+                >
+                  <p className="uppercase">
+                    {muscleGroup.replaceAll("_", " ")}
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+        )}
       </div>
       <Header
         index={"03"}
