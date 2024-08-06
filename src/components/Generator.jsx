@@ -29,7 +29,10 @@ const Generator = () => {
       />
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {Object.keys(WORKOUTS).map((type, index) => (
-          <button key={index} className="bg-slate-950 border border-blue-400 py-2 rounded-lg">
+          <button
+            key={index}
+            className="bg-slate-950 border border-blue-400 py-2 rounded-lg"
+          >
             <p>{type}</p>
           </button>
         ))}
