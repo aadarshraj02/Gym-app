@@ -58,7 +58,7 @@ const Generator = () => {
         title={"Lock on Targets"}
         description={"Select the muscles judge for annihilation."}
       />
-      <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg flex items-center justify-center">
+      <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg flex flex-col">
         <button
           onClick={toggleModal}
           className="relative flex items-center justify-center p-3"
@@ -66,7 +66,7 @@ const Generator = () => {
           <p>Select muscle groups</p>
           <FaCaretDown className="absolute right-3 top-1/2 -translate-y-1/2" />
         </button>
-        {showModal && <div></div>}
+        {showModal && <div>modal</div>}
       </div>
       <Header
         index={"03"}
@@ -77,12 +77,12 @@ const Generator = () => {
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => (
           <button
             onClick={() => {
-              setPoison(scheme);
+              setGoals(scheme);
             }}
             key={schemeIndex}
             className={
               "bg-slate-950 border border-blue-400 py-2 rounded-lg hover:border-blue-600 duration-200" +
-              (scheme === poison ? " border-blue-600" : "border-blue-400")
+              (scheme === goals ? " border-blue-600" : "border-blue-400")
             }
           >
             <p className="capitalize">{scheme.replaceAll("_", " ")}</p>
