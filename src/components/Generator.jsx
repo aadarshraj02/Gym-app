@@ -74,6 +74,9 @@ const Generator = () => {
             ).map((muscleGroup, muscleGroupIndex) => {
               return (
                 <button
+                  onClick={() => {
+                    updateMuscles(muscleGroup);
+                  }}
                   key={muscleGroupIndex}
                   className={
                     "hover:text-blue-400 duration-200 " +
