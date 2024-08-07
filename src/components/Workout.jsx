@@ -4,8 +4,8 @@ const Workout = (props) => {
   const { workout } = props;
   return (
     <SectionWrapper
-      header={"generate your workout"}
-      title={["It's", "Huge", "o'clock"]}
+      header={"Welcome to"}
+      title={["The", "Danger", "Zone"]}
     >
       {" "}
     </SectionWrapper>
