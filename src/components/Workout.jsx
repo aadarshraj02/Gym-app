@@ -1,3 +1,4 @@
+import ExerciseCard from "./ExerciseCard";
 import SectionWrapper from "./SectionWrapper";
 
 const Workout = (props) => {
