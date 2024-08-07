@@ -7,7 +7,7 @@ const Workout = (props) => {
     <SectionWrapper header={"Welcome to"} title={["The", "Danger", "Zone"]}>
       <div className="flex flex-col gap-4">
         {workout.map((exercise, i) => (
-          <ExerciseCard />
+          <ExerciseCard exercise={exercise} key={i} />
         ))}
       </div>
     </SectionWrapper>
