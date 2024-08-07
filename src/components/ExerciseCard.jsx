@@ -11,6 +11,7 @@ const ExerciseCard = (props) => {
         <h2 className="capitalize whitespace-nowrap truncate max-w-full text-lg sm:text-xl md:text-2xl flex-1 md:text-center">
           {exercise.name.replaceAll("_", " ")}
         </h2>
+        <p className="text-sm text-slate-400 capitalize">{exercise.type}</p>
       </div>
     </div>
   );
